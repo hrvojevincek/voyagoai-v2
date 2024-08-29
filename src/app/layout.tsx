@@ -19,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
       <html lang="en">
         <body className={hind.className}>{children}</body>
       </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   );
 }
