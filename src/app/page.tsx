@@ -8,15 +8,12 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 async function searchTrip(formData: FormData) {
   "use server";
 
-  const destination = formData.get("destination");
-  const date = formData.get("date");
-
   const searchParams = new URLSearchParams({
-    destination: destination as string,
-    date: date as string,
+    destination: formData.get("destination") as string,
+    duration: formData.get("duration") as string,
   });
 
-  redirect(`/search?${searchParams.toString()}`);
+  redirect(`/result?${searchParams.toString()}`);
 }
 
 export default function Home() {
