@@ -9,8 +9,8 @@ const Page: FC<PageProps> = async ({ searchParams }) => {
   const { destination, duration } = searchParams;
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-2xl">
+    <div className="flex h-screen w-screen">
+      <div>
         <h1 className="text-2xl font-bold mb-4">Search Results</h1>
         <p className="mb-2">
           <span className="font-semibold">Destination:</span>{" "}
@@ -20,6 +20,8 @@ const Page: FC<PageProps> = async ({ searchParams }) => {
           <span className="font-semibold">Duration:</span>{" "}
           {duration ? `${duration} days` : "Not specified"}
         </p>
+      </div>
+      <div className=" flex-grow">
         <Map />
       </div>
     </div>
